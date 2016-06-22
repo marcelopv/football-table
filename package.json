@@ -1,0 +1,14 @@
+{
+  "name": "football-table",
+  "version": "1.0.0",
+  "description": "football table",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcelo Vargas",
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^15.1.0"
+  }
+}
