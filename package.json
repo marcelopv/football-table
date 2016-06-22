@@ -4,11 +4,16 @@
   "description": "football table",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bundler": "browserify src/app/index.js -o static/bundle.js",
+    "serve": "npm run bundler && beefy static/bundle.js 8080 --live true --index src/index.html"
   },
   "author": "Marcelo Vargas",
   "license": "ISC",
   "devDependencies": {
-    "react": "^15.1.0"
+    "beefy": "^2.1.8",
+    "browserify": "^13.0.1",
+    "react": "^15.1.0",
+    "uniq": "^1.0.1",
+    "watchify": "^3.7.0"
   }
 }
