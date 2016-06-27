@@ -1,7 +1,10 @@
 var React = require('react');
+var TeamList = require('./TeamList');
 
 module.exports = React.createClass({
   render: function() {
-    return <h1>Hello, Football Table App!</h1>;
+    return (
+      <TeamList data={this.props.data}/>
+    );
   }
 });

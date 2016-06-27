@@ -1,9 +1,9 @@
 var ReactDOM = require('react-dom');
 var React = require('react');
 
-var Teste = require('./Teste');
+var Hello = require('./components/Hello');
 
 ReactDOM.render(
-  <Teste />,
-  document.getElementById('example')
+  <Hello />,
+  document.getElementById('content')
 );
