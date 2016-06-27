@@ -2,18 +2,18 @@
   "name": "football-table",
   "version": "1.0.0",
   "description": "football table",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "bundler": "browserify src/app/index.js -o static/bundle.js",
-    "serve": "npm run bundler && beefy static/bundle.js 8080 --live true --index src/index.html"
+    "serve": "beefy src/app/index.js:bundle.js 8080 --index=src/index.html -- -t [ babelify --presets [ react ] ]"
   },
   "author": "Marcelo Vargas",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
     "beefy": "^2.1.8",
-    "browserify": "^13.0.1",
     "react": "^15.1.0",
-    "uniq": "^1.0.1",
-    "watchify": "^3.7.0"
+    "react-dom": "^15.1.0"
   }
 }
