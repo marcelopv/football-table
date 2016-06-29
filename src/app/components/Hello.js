@@ -1,5 +1,6 @@
 var React = require('react');
 var TeamTable = require('./TeamTable');
+var FilterableTeamTable = require('./FilterableTeamTable');
 
 var teams = [
   {id: 1, name: 'Grêmio', position: 1, matchs: 6, points: 18},
@@ -14,8 +15,8 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="hello">
-        <h1>Hello, Football Table App!</h1>
-        <TeamTable teams={teams}/>
+        <h1>Hello, Welcome to Football Table App!</h1>
+        <FilterableTeamTable teams={teams}/>
       </div>
     );
   }

@@ -7,8 +7,13 @@ module.exports = React.createClass({
     var lastCategory = null;
 
     this.props.teams.forEach(function(team){
-        rows.push(<TeamRow team={team} />);
-    });
+      if (team.name.toLowerCase().indexOf(this.props.filterText.toLowerCase()) === -1) {
+          return;
+      }
+
+      rows.push(<TeamRow team={team} key={team.name}/>);
+
+    }.bind(this));
 
     return (
       <table>
