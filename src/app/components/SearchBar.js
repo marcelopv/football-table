@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-module.exports = React.createClass({
+class SearchBar extends React.Component{
 
-  handleChange: function() {
+  handleChange() {
     this.props.onUserInput(
       this.refs.filterTextInput.value
     );
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <form>
         <input
@@ -20,4 +20,6 @@ module.exports = React.createClass({
         </form>
     );
   }
-});
+}
+
+export default SearchBar;

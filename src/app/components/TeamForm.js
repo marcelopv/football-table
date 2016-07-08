@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-module.exports = React.createClass({
-  getInitialState: function(){
+class TeamForm extends React.Component {
+  getInitialState(){
       return {name: ''};
   },
 
-  handleNameChange: function(e){
+  handleNameChange(e){
     this.setState({name:e.target.value});
   },
 
-  render: function(){
+  render(){
     return(
       <form className="teamForm">
         <input type="text" placeholder="Team name" value={this.state.name} onChange={this.handleNameChange}/>
@@ -17,4 +17,6 @@ module.exports = React.createClass({
       </form>
     )
   }
-});
+}
+
+exports default TeamForm;

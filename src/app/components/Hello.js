@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import TeamTable from './TeamTable';
 import FilterableTeamTable from './FilterableTeamTable';
 
-var teams = [
+const teams = [
   {id: 1, name: 'Grêmio', position: 1, matchs: 6, points: 18},
   {id: 2, name: 'Internacional', position: 2, matchs: 6, points: 15},
   {id: 3, name: 'Flamengo', position: 3, matchs: 6, points: 12},
@@ -11,8 +11,8 @@ var teams = [
   {id: 6, name: 'Santos', position: 6, matchs: 6, points: 3}
 ];
 
-module.exports = React.createClass({
-  render: function() {
+class Hello extends React.Component {
+  render() {
     return (
       <div className="hello">
         <h1>Hello, Welcome to Football Table App!</h1>
@@ -20,4 +20,6 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+
+export default Hello;

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import TeamRow from './TeamRow';
 
-module.exports = React.createClass({
-  render: function() {
+class TeamTable extends React.Component{
+  render() {
     var rows = [];
     var lastCategory = null;
 
@@ -31,4 +31,6 @@ module.exports = React.createClass({
       </table>
     );
   }
-});
+}
+
+export default TeamTable;

@@ -1,22 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import TeamTable from './TeamTable';
 import SearchBar from './SearchBar';
 
-module.exports = React.createClass({
+class FilterableTeamTable extends React.Component {
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       filterText: ''
     };
-  },
+  }
 
-  handleUserInput: function(filterText) {
+  handleUserInput(filterText) {
     this.setState({
       filterText: filterText
     });
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <div>
         <SearchBar
@@ -30,4 +30,6 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+
+export default FilterableTeamTable;

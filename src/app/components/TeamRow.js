@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-module.exports = React.createClass({
-  render: function(){
+class TeamRow extends React.Component{
+  render(){
       var team = this.props.team;
 
       return (
@@ -13,4 +13,6 @@ module.exports = React.createClass({
         </tr>
       )
   }
-});
+}
+
+export default TeamRow;
