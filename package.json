@@ -4,7 +4,7 @@
   "description": "football table",
   "main": "app.js",
   "scripts": {
-    "serve": "webpack-dev-server --progress --colors --watch --content-base dist"
+    "serve": "webpack-dev-server"
   },
   "author": "Marcelo Vargas",
   "license": "ISC",
