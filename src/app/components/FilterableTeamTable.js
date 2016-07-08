@@ -1,6 +1,6 @@
-var React = require('react');
-var TeamTable = require('./TeamTable');
-var SearchBar = require('./SearchBar');
+import React from 'react';
+import TeamTable from './TeamTable';
+import SearchBar from './SearchBar';
 
 module.exports = React.createClass({
 

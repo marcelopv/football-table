@@ -1,6 +1,6 @@
-var React = require('react');
-var TeamTable = require('./TeamTable');
-var FilterableTeamTable = require('./FilterableTeamTable');
+import React from 'react';
+import TeamTable from './TeamTable';
+import FilterableTeamTable from './FilterableTeamTable';
 
 var teams = [
   {id: 1, name: 'Grêmio', position: 1, matchs: 6, points: 18},

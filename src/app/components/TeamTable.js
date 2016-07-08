@@ -1,5 +1,5 @@
-var React = require('react');
-var TeamRow = require('./TeamRow');
+import React from 'react';
+import TeamRow from './TeamRow';
 
 module.exports = React.createClass({
   render: function() {

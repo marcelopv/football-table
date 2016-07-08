@@ -1,7 +1,7 @@
-var ReactDOM = require('react-dom');
-var React = require('react');
+import ReactDOM from 'react-dom';
+import React from 'react';
 
-var Hello = require('./components/Hello');
+import Hello from './components/Hello';
 
 ReactDOM.render(
   <Hello />,

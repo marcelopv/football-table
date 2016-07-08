@@ -4,11 +4,17 @@
   "description": "football table",
   "main": "app.js",
   "scripts": {
-    "serve": "beefy src/app/index.js:bundle.js 8080 --index=src/index.html -- -t [ babelify --presets [ react ] ]"
+    "serve": "webpack-dev-server --progress --colors --watch --content-base dist"
   },
   "author": "Marcelo Vargas",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "webpack": "^1.13.1"
+  },
   "dependencies": {
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.3.0",
