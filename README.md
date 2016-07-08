@@ -1,1 +1,6 @@
-Football table is an app built on ReactJS.
+#Football table
+
+**TechStack:**
+- ReactJS
+- Webpack
+- NPM
