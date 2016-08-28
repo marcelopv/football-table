@@ -10,15 +10,13 @@ const teams = [
   { id: 6, name: 'Santos', position: 6, matchs: 6, points: 3 },
 ];
 
-class Hello extends React.Component {
-  render() {
-    return (
-      <div className="hello">
-        <h1>Hello, Welcome to Football Table App!</h1>
-        <FilterableTeamTable teams={teams} />
-      </div>
-    );
-  }
+function Hello() {
+  return (
+    <div className="hello">
+      <h1>Hello, Welcome to Football Table App!</h1>
+      <FilterableTeamTable teams={teams} />
+    </div>
+  );
 }
 
 export default Hello;
