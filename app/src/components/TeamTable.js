@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TeamRow from './TeamRow';
 
-class TeamTable extends React.Component{
-  render() {
-    var rows = [];
-    var lastCategory = null;
+class TeamTable extends React.Component {
 
-    this.props.teams.forEach(function(team){
+  constructor(props) {
+    super(props);
+    this.state = {
+      filterText: this.props.filterText,
+      teams: this.props.teams,
+    };
+  }
+
+  render() {
+    let rows = [];
+    this.props.teams.forEach(function map(team) {
       if (team.name.toLowerCase().indexOf(this.props.filterText.toLowerCase()) === -1) {
-          return;
+        return;
       }
 
-      rows.push(<TeamRow team={team} key={team.name}/>);
-
+      rows.push(<TeamRow team={team} key={team.name} />);
     }.bind(this));
 
     return (
@@ -32,5 +38,11 @@ class TeamTable extends React.Component{
     );
   }
 }
+
+TeamTable.propTypes = {
+  teams: React.PropTypes.array,
+  filterText: React.PropTypes.string,
+};
+
 
 export default TeamTable;

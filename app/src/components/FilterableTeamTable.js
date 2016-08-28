@@ -1,18 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TeamTable from './TeamTable';
 import SearchBar from './SearchBar';
 
 class FilterableTeamTable extends React.Component {
 
-  getInitialState() {
-    return {
-      filterText: ''
+  constructor(props) {
+    super(props);
+    this.state = {
+      filterText: '',
+      teams: this.props.teams,
     };
+
+    this.handleUserInput = this.handleUserInput.bind(this);
   }
 
   handleUserInput(filterText) {
     this.setState({
-      filterText: filterText
+      filterText,
     });
   }
 
@@ -31,5 +35,9 @@ class FilterableTeamTable extends React.Component {
     );
   }
 }
+
+FilterableTeamTable.propTypes = {
+  teams: React.PropTypes.array,
+};
 
 export default FilterableTeamTable;

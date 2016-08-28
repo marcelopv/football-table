@@ -1,10 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class SearchBar extends React.Component{
+class SearchBar extends React.Component {
 
-  handleChange() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filterText: this.props.filterText,
+    };
+
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(event) {
     this.props.onUserInput(
-      this.refs.filterTextInput.value
+      event.target.value
     );
   }
 
@@ -15,11 +24,16 @@ class SearchBar extends React.Component{
           type="text"
           placeholder="Search..."
           value={this.props.filterText}
-          ref="filterTextInput"
-          onChange={this.handleChange} />
-        </form>
+          onChange={this.onChange}
+        />
+      </form>
     );
   }
 }
+
+SearchBar.propTypes = {
+  filterText: React.PropTypes.string,
+  onUserInput: React.PropTypes.func,
+};
 
 export default SearchBar;
