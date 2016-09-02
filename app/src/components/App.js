@@ -10,7 +10,7 @@ const teams = [
   { id: 6, name: 'Santos', position: 6, matchs: 6, points: 3 },
 ];
 
-function Hello() {
+function App() {
   return (
     <div className="hello">
       <h1>Hello, Welcome to Football Table App!</h1>
@@ -19,4 +19,4 @@ function Hello() {
   );
 }
 
-export default Hello;
+export default App;
