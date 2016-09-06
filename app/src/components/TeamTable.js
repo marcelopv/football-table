@@ -13,13 +13,13 @@ class TeamTable extends React.Component {
 
   render() {
     let rows = [];
-    this.props.teams.forEach(function map(team) {
+    this.props.teams.forEach((team) => {
       if (team.name.toLowerCase().indexOf(this.props.filterText.toLowerCase()) === -1) {
         return;
       }
 
       rows.push(<TeamRow team={team} key={team.name} />);
-    }.bind(this));
+    });
 
     return (
       <table>
